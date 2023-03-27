@@ -1,0 +1,145 @@
+% head, foot e stile
+\usepackage{lastpage} 		% info sul # dell'ultima pagina del documento
+\usepackage{fancyhdr} 		% per modificare dimensioni,margini, intestazioni e righe a piè di pagina
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+    \fancyhf{} 				% cancella tutti i campi di intestazione e piè di pagina
+    \lhead{
+        Web Information Management
+    }
+
+    \rhead{
+        Usability Analysis
+    }
+
+    \rfoot{
+        \thepage{}/\pageref{LastPage}
+    }
+
+    \renewcommand{\headrulewidth}{0.3pt}  
+    \renewcommand{\footrulewidth}{0.3pt}
+}
+\pagestyle{plain}
+
+\usepackage{xspace}
+\usepackage{fixfoot} % footnote
+
+% fixed footnote
+\DeclareFixedFootnote*{\footAP}{Access Point}
+\DeclareFixedFootnote*{\footDSSS}{Direct Sequence Spread Spectrum}
+\DeclareFixedFootnote*{\footFHSS}{Frequency Hopping Spread Spectrum}
+\DeclareFixedFootnote*{\footQoS}{Quality of Service $\rightarrow$ guarantee a certain amount of bandwidth}
+\DeclareFixedFootnote*{\footTSF}{Timing Synchronization Function}
+\DeclareFixedFootnote*{\footTIM}{Traffic Indicator Map}
+\DeclareFixedFootnote*{\footRFC}{Request For Comments}
+\DeclareFixedFootnote*{\footTTL}{Time To Leave}
+\DeclareFixedFootnote*{\footPER}{Packet Error Rate}
+\DeclareFixedFootnote*{\footFEC}{Forward Error Connection}
+\DeclareFixedFootnote*{\footAddTS}{Add Traffic Specification}
+%
+
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+
+\usepackage[plain]{algorithm}      % algoritmi
+\usepackage{algpseudocode}              % pseudocodice
+
+% caratteri e margini
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphbox}		% permette di modificare i margini
+
+% immagini
+\usepackage{graphicx}       % permette di inserire delle immagini
+\usepackage{caption}        % numerazione figure e loro descrizione testuale
+\usepackage{subcaption}     % sottofigure numerabili
+\usepackage{float}  		% permette di inserire un # qualsiasi di figure fluttuanti
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{rotating} 		% permette di ruotare le immagini
+\usepackage{fourier}
+
+% math mode
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{listings} 		% permette di inserire degli spezzoni di codice
+
+% tabelle
+\usepackage{booktabs} 		% permette di poter usare delle liste nelle tabelle
+\usepackage{tabularx} 
+\usepackage{longtable} 		% una tabella può continuare su più pagine
+\usepackage[table]{xcolor} 	% rende disponibile l'utilizzo di un colore per lo sfondo delle celle di una tabella
+\usepackage{array}
+\renewcommand{\arraystretch}{1.6} % modifica altezza di una cella
+\usepackage{multirow}
+\usepackage{multicol}
+
+% colors defined
+\definecolor{lightblue}{RGB}{176, 250, 255}
+\definecolor{lightgreen}{RGB}{176, 250, 203}
+\definecolor{lightyellow}{RGB}{255, 255, 130}
+\definecolor{lightpink}{RGB}{255, 196, 255}
+\definecolor{lightorange}{RGB}{255, 196, 117}
+\definecolor{lightred}{RGB}{255, 158, 171}
+
+
+% tipo di colonna per le tabelle -> a capo con \newline
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% indice con i puntini
+\usepackage{tocloft}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+
+% formattazione e indice
+\usepackage{appendix}		% aggiunge dei comandi per l'appendice
+\usepackage{parskip} 		% aiuta LaTeX a trovare il miglior stile per i page break
+\setcounter{secnumdepth}{5}	% numera i sottoparagrafi
+\setcounter{tocdepth}{5} 	% aggiunge all'indice i sottoparagrafi
+\usepackage{xr-hyper}		% riferimenti ipertestuali tra documenti
+\usepackage{hyperref}		% riferimenti ipertestuali
+\usepackage{blindtext}
+\usepackage{tikz}
+\newcommand{\tikzxmark}{%
+\tikz[scale=0.23] {
+    \draw[line width=0.7,line cap=round] (0,0) to [bend left=6] (1,1);
+    \draw[line width=0.7,line cap=round] (0.2,0.95) to [bend right=3] (0.8,0.05);
+}}
+\newcommand{\tikzcmark}{%
+\tikz[scale=0.23] {
+    \draw[line width=0.7,line cap=round] (0.25,0) to [bend left=10] (1,1);
+    \draw[line width=0.8,line cap=round] (0,0.35) to [bend right=1] (0.23,0);
+}}
+
+% copertina
+\newcommand{\copertina}{
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{\fill}
+
+			\begin{Huge}
+				\textbf{Web Information Management} \\
+			\end{Huge}
+
+            \vspace*{2cm}
+
+            \LARGE{Usability analysis of a website}
+
+            \vspace*{2cm}
+            \begin{center}
+                \begin{tabular}{c}
+                    \Large{Author: \textit{Brugnolaro Filippo}}\\
+                    \Large{Student ID: \textit{2087666}}\\
+                    \Large{Date: \textit{27$^{th}$ March 2023}}
+                \end{tabular}
+            \end{center}
+
+            \vspace*{\fill}
+		\end{center}
+	\end{titlepage}
+}
+
