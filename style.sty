@@ -101,7 +101,11 @@
 \setcounter{secnumdepth}{5}	% numera i sottoparagrafi
 \setcounter{tocdepth}{5} 	% aggiunge all'indice i sottoparagrafi
 \usepackage{xr-hyper}		% riferimenti ipertestuali tra documenti
-\usepackage{hyperref}		% riferimenti ipertestuali
+\usepackage[colorlinks = true,
+linkcolor = black,
+urlcolor  = blue,
+citecolor = black,
+anchorcolor = black]{hyperref}		% riferimenti ipertestuali
 \usepackage{blindtext}
 \usepackage{tikz}
 \newcommand{\tikzxmark}{%
@@ -127,14 +131,16 @@
 
             \vspace*{2cm}
 
-            \LARGE{Usability analysis of a website}
+            \LARGE{Usability analysis of\\
+            \url{https://www.brugnolaro.com/it/}\\
+            website}
 
             \vspace*{2cm}
             \begin{center}
                 \begin{tabular}{c}
                     \Large{Author: \textit{Brugnolaro Filippo}}\\
                     \Large{Student ID: \textit{2087666}}\\
-                    \Large{Date: \textit{27$^{th}$ March 2023}}
+                    \Large{Period of analysis: \textit{March 2023}}
                 \end{tabular}
             \end{center}
 

@@ -64,7 +64,43 @@ The best layout of a product webpage of an e-commerce should contain the followi
 \end{itemize}
 
 \subsubsection{Visual Description}
+The images are in 2 dimension, which is really good. In fact this allows the users not
+to interact with a 3 dimensional object which leads to more computation effort.
 
+The user can also interact with the image and this
+is a good design choice.
+There is the zoom functionality which allows the user to better observe the
+product's details (figure \ref{internal-zoom}).
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[scale = 0.29]{images/zoom_product.png} 
+    \caption{Internal page (zoom functionality)}
+    \label{internal-zoom}
+\end{figure}
+\newline
+A bad choice is writing how to zoom.
+In particular, saying "\textit{use scroll in order to increase/decrease zoom}" is wrong because
+many users could not use a mouse but the laptop's trackpad (figure \ref{internal-product}).
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[scale = 0.29]{images/product_price.png} 
+    \caption{Internal page (product)}
+    \label{internal-product}
+\end{figure}
+\newpage
+It is also good the possibility for the user to open the image in fullscreen page in order to better
+see it (figure \ref{internal-opened-image})
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[scale = 0.29]{images/open_image_product.png} 
+    \caption{Internal page (opened image)}
+    \label{internal-opened-image}
+\end{figure}
+\newline
+So finally images are designed in a good way but there is the need to solve that \mbox{problem} about the zoom
+functionality.
+
+\newpage
 \subsubsection{Textual Description}
 The textual description is very important because the user has to know about specific
 characterisitics about the product. It is suggested to put it before the "\textit{Add to cart}" button.
@@ -81,5 +117,22 @@ In this case the position of the textual description is wrong because is under t
 \end{figure}
 
 \subsubsection{Price}
-
+The price is always visible and it is positioned under the name of it. This is a good design choice because
+users are used to associate the position of the price near the name of the product (figure \ref{internal-product}).
+\newpage
 \subsection{Checkout}
+In the checkout page there is each product which is associated with its price. That is
+really good and clever, because users are not required to remember prices and this can decrease the computational
+effort done by the user.
+A bad choice is that an account registration is required while performing the checkout.
+In section §\ref{ask-personal-data} there is no evidence of requests of personal data
+for visiting the website. However in this section of the website the condition
+of giving data is very bad and the user could lose the trust on the website (figure \ref{internal-checkout}).
+
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[scale = 0.29]{images/checkout.png} 
+    \caption{Internal page (checkout)}
+    \label{internal-checkout}
+\end{figure}
+
